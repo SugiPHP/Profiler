@@ -1,0 +1,22 @@
+{
+    "name": "sugiphp/profiler",
+    "type": "library",
+    "description": "SugiPHP Profiling Component",
+    "keywords": ["profiling", "stopwatch", "profiler", "time"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Plamen Popov",
+            "email": "tzappa@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "SugiPHP\\Profiler\\": ""
+        }
+    },
+    "minimum-stability": "dev"
+}
