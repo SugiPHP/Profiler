@@ -1,5 +1,7 @@
 <?php
 /**
+ * Profiler class.
+ *
  * @package SugiPHP.Profiler
  * @author  Plamen Popov <tzappa@gmail.com>
  * @license http://opensource.org/licenses/mit-license.php (MIT License)
@@ -7,9 +9,6 @@
 
 namespace SugiPHP\Profiler;
 
-/**
- * Profiler class
- */
 class Profiler
 {
 	/**
@@ -27,9 +26,8 @@ class Profiler
 	protected $profiles = array();
 
 	/**
-     * Turns the profiler on and off.
-     *
-     * @param bool $active TRUE to turn profiler on, FALSE to turn it off.
+	 * Turns the profiler on and off.
+	 * @param bool $active TRUE to turn profiler on, FALSE to turn it off.
 	 */
 	public function setActive($active)
 	{
@@ -49,8 +47,9 @@ class Profiler
 	/**
 	 * Adding a profile entry to the queue only if the profiler is set to active.
 	 *
-	 * @param  float $duration
-	 * @param  array $params Optional. Custom parameters to be saved along with default "duration" and debug "trace".
+	 * @param float $duration
+	 * @param array $params Optional. Custom parameters to be saved along with default "duration" and debug "trace".
+	 *
 	 * @return array|FALSE Returns FALSE if the profiler is not active
 	 */
 	public function addProfile($duration, array $params = array())
@@ -59,8 +58,8 @@ class Profiler
 			return false;
 		}
 
-		$e = new \Exception();
-		$profile = array_merge($params, array("duration" => $duration, "trace" => $e->getTraceAsString()));
+		$except = new \Exception();
+		$profile = array_merge($params, array("duration" => $duration, "trace" => $except->getTraceAsString()));
 		$this->profiles[] = $profile;
 
 		return $profile;

@@ -1,8 +1,10 @@
 <?php
 /**
- * @package    SugiPHP.Profiler
- * @author     Plamen Popov <tzappa@gmail.com>
- * @license    http://opensource.org/licenses/mit-license.php (MIT License)
+ * PHP Unit test for Profiler class
+ *
+ * @package SugiPHP.Profiler
+ * @author  Plamen Popov <tzappa@gmail.com>
+ * @license http://opensource.org/licenses/mit-license.php (MIT License)
  */
 
 namespace SugiPHP\Profiler;

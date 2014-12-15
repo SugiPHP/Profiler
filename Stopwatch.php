@@ -1,5 +1,7 @@
 <?php
 /**
+ * Profiling Stopwatch Class.
+ *
  * @package SugiPHP.Profiler
  * @author  Plamen Popov <tzappa@gmail.com>
  * @license http://opensource.org/licenses/mit-license.php (MIT License)
@@ -7,9 +9,6 @@
 
 namespace SugiPHP\Profiler;
 
-/**
- * Profiling Stopwatch Class
- */
 class Stopwatch
 {
 	protected $startTime;
@@ -75,7 +74,7 @@ class Stopwatch
 	}
 
 	/**
-	 * getDuration() alias
+	 * Method alias
 	 *
 	 * @see getDuration()
 	 */

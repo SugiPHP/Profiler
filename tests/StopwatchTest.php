@@ -1,8 +1,10 @@
 <?php
 /**
- * @package    SugiPHP.Profiler
- * @author     Plamen Popov <tzappa@gmail.com>
- * @license    http://opensource.org/licenses/mit-license.php (MIT License)
+ * PHP Unit test for Stopwatch class
+ *
+ * @package SugiPHP.Profiler
+ * @author  Plamen Popov <tzappa@gmail.com>
+ * @license http://opensource.org/licenses/mit-license.php (MIT License)
  */
 
 namespace SugiPHP\Profiler;
@@ -67,6 +69,8 @@ class StopwatchTest extends \PHPUnit_Framework_TestCase
 	}
 
 	/**
+	 * An exception is thrown trying to stop not started stopwatch.
+	 *
 	 * @expectedException SugiPHP\Profiler\Exception
 	 */
 	public function testStopWithoutStart()
@@ -76,6 +80,8 @@ class StopwatchTest extends \PHPUnit_Framework_TestCase
 	}
 
 	/**
+	 * An exception is thrown trying to start stopwatch without stopping it.
+	 *
 	 * @expectedException SugiPHP\Profiler\Exception
 	 */
 	public function testDoubleStart()
